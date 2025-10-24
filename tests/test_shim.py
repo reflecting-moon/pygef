@@ -34,6 +34,7 @@ def test_gef_to_cpt_data(_type, cpt_gef_1, cpt_gef_1_bytes, cpt_gef_1_string) ->
         "bro_id": None,
         "alias": "CPTU17.8 + 83BITE",
         "cone_diameter": None,
+        "company_id": "Mos Grondmechanica B.V",
         "cone_surface_area": 1000.0,
         "cone_surface_quotient": 0.8,
         "cone_to_friction_sleeve_distance": 80.0,

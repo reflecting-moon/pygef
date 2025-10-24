@@ -20,6 +20,7 @@ class BoreData:
     Attributes:
         bro_id (str | None): BRO ID of the BHRgt.
         alias  (str | None): Alias of the CPT.
+        company_id: Company ID (GEF only).
         research_report_date (date): research report date
         delivered_location (Location): delivered location in EPSG:28992 - RD new
         groundwater_level (float | None): groundwater level
@@ -59,6 +60,7 @@ class BoreData:
 
     # dispatch_document bhrgt
     bro_id: str | None
+    company_id: str | None
     research_report_date: date
     description_procedure: str
     delivered_location: Location
