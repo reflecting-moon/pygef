@@ -185,6 +185,7 @@ def gef_cpt_to_cpt_data(gef_cpt: _GefCpt) -> CPTData:
     kwargs["delivered_vertical_position_datum"] = VerticalDatumClass(
         f"{int(gef_cpt.height_system):05d}"
     )
+    kwargs["company_id"] = gef_cpt.company_id
 
     # TODO! parse measurementtext 9 in gef?
     kwargs["delivered_vertical_position_reference_point"] = "unknown"
@@ -215,4 +216,5 @@ def gef_bore_to_bore_data(gef_bore: _GefBore) -> BoreData:
     kwargs["final_sample_depth"] = None
     kwargs["bore_hole_completed"] = None
     kwargs["data"] = gef_bore.df
+    kwargs["company_id"] = gef_bore.company_id
     return BoreData(**kwargs)

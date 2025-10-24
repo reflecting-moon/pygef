@@ -56,6 +56,7 @@ class _Gef:
         self.file_date = utils.parse_file_date(self._headers)
         self.test_id = utils.parse_test_id(self._headers)
         self.type = utils.parse_gef_type(self._headers)
+        self.company_id = utils.first_header_value(self._headers, "COMPANYID")
 
     @dataclass
     class ColumnsInfo:

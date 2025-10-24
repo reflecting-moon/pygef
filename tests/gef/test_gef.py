@@ -77,6 +77,11 @@ def test_xy():
     assert cpt3.delivered_location.srs_name == "urn:ogc:def:crs:EPSG::28992"
 
 
+def test_company_id():
+    cpt3 = read_cpt(os.path.join(BasePath, "../test_files/cpt3.gef"))
+    assert cpt3.company_id == "OMEGAM"
+
+
 def test_measurement_var_with_minus_sign():
     s = r"#MEASUREMENTVAR= 41, -15.000000, "
     v = utils.parse_measurement_var_as_float(s, 41)

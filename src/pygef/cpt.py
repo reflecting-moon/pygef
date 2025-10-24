@@ -20,6 +20,7 @@ class CPTData:
         bro_id (str | None): BRO ID of the CPT.
         alias  (str | None): Alias of the CPT.
         research_report_date (date): research report date
+        company_id (str | None): Company ID (GEF only)..
         delivered_location (Location): delivered location in `EPSG:28992 - RD new`
         standardized_location (Location | None): standardized location in `EPSG:4326 - WGS 84`
         delivered_vertical_position_offset (float | None): delivered vertical position offset
@@ -100,6 +101,7 @@ class CPTData:
 
     # dispatch_document cpt
     bro_id: str | None
+    company_id: str | None
     research_report_date: date
     cpt_standard: str | None
     delivered_location: Location
