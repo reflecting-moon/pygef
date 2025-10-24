@@ -34,6 +34,7 @@ def read_xml(
         # kwargs of attribute: value
         resolved = dict()
 
+        resolved["company_id"] = None
         for atrib, d in resolver_schema.items():
             d = cast(dict[str, Any], d)
             el = payload.find(d["xpath"], payload.nsmap)

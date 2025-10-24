@@ -33,6 +33,7 @@ class _GefCpt(_Gef):
             )
         self.project_id = utils.parse_project_type(self._headers, "cpt")
         self.cone_id = utils.parse_cone_id(self._headers)
+        self.company_id = utils.first_header_value(self._headers, "COMPANYID")
 
         self.cpt_class = utils.parse_cpt_class(self._headers)
 
